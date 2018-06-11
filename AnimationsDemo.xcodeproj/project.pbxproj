@@ -41,6 +41,8 @@
 		077A7FAE20CE40DF00F3A4E8 /* LiveAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FAD20CE40DF00F3A4E8 /* LiveAnimationViewController.m */; };
 		077A7FB220CE44B000F3A4E8 /* CommonUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB120CE44B000F3A4E8 /* CommonUse.m */; };
 		077A7FB520CE455C00F3A4E8 /* CommSysAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */; };
+		077A7FBA20CE5D4E00F3A4E8 /* WaterProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB820CE5D4D00F3A4E8 /* WaterProgressView.m */; };
+		077A7FBD20CE5DC600F3A4E8 /* WaterProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FBC20CE5DC600F3A4E8 /* WaterProgressViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,10 @@
 		077A7FB120CE44B000F3A4E8 /* CommonUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUse.m; sourceTree = "<group>"; };
 		077A7FB320CE455C00F3A4E8 /* CommSysAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommSysAnimationViewController.h; sourceTree = "<group>"; };
 		077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommSysAnimationViewController.m; sourceTree = "<group>"; };
+		077A7FB820CE5D4D00F3A4E8 /* WaterProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterProgressView.m; sourceTree = "<group>"; };
+		077A7FB920CE5D4E00F3A4E8 /* WaterProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterProgressView.h; sourceTree = "<group>"; };
+		077A7FBB20CE5DC600F3A4E8 /* WaterProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterProgressViewController.h; sourceTree = "<group>"; };
+		077A7FBC20CE5DC600F3A4E8 /* WaterProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterProgressViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +313,7 @@
 		077A7FAA20CE409B00F3A4E8 /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
+				077A7FB720CE5D2000F3A4E8 /* WaterProgress */,
 				077A7FAF20CE42F300F3A4E8 /* Commend */,
 				077A7FAB20CE40B400F3A4E8 /* Live */,
 			);
@@ -332,6 +339,17 @@
 				077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */,
 			);
 			path = Commend;
+			sourceTree = "<group>";
+		};
+		077A7FB720CE5D2000F3A4E8 /* WaterProgress */ = {
+			isa = PBXGroup;
+			children = (
+				077A7FB920CE5D4E00F3A4E8 /* WaterProgressView.h */,
+				077A7FB820CE5D4D00F3A4E8 /* WaterProgressView.m */,
+				077A7FBB20CE5DC600F3A4E8 /* WaterProgressViewController.h */,
+				077A7FBC20CE5DC600F3A4E8 /* WaterProgressViewController.m */,
+			);
+			path = WaterProgress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,10 +488,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				071AB8B11FDA5728002B7F19 /* ZhaTaGiftAnimationView.m in Sources */,
+				077A7FBA20CE5D4E00F3A4E8 /* WaterProgressView.m in Sources */,
 				071AB8AB1FDA5691002B7F19 /* BaseGiftAnimationView.m in Sources */,
 				077A7FB220CE44B000F3A4E8 /* CommonUse.m in Sources */,
 				071AB88F1FDA36C6002B7F19 /* MASConstraint.m in Sources */,
 				071AB8A71FDA3C3C002B7F19 /* UIImage+ClipImage.m in Sources */,
+				077A7FBD20CE5DC600F3A4E8 /* WaterProgressViewController.m in Sources */,
 				071AB8921FDA36C6002B7F19 /* MASViewAttribute.m in Sources */,
 				071AB8971FDA36C6002B7F19 /* ViewController+MASAdditions.m in Sources */,
 				071AB8941FDA36C6002B7F19 /* NSArray+MASAdditions.m in Sources */,

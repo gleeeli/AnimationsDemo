@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *fishImageView;
 @property (weak, nonatomic) IBOutlet UIButton *transtitionBtn;
 @property(copy) NSString *subType;
+
 @end
 
 @implementation CommSysAnimationViewController

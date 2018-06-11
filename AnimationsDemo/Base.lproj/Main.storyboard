@@ -191,6 +191,37 @@
             </objects>
             <point key="canvasLocation" x="1111" y="-80"/>
         </scene>
+        <!--Water Progress View Controller-->
+        <scene sceneID="b6m-dt-uWG">
+            <objects>
+                <viewController storyboardIdentifier="WaterProgressViewController" id="fhz-fD-WYd" customClass="WaterProgressViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eKC-Jb-yOL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6EK-ru-Pd5">
+                                <rect key="frame" x="8" y="40" width="359" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="fhz-fD-WYd" eventType="valueChanged" id="8jz-TW-n87"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6EK-ru-Pd5" firstAttribute="top" secondItem="tGo-ej-icM" secondAttribute="top" constant="20" id="0NT-p6-Cm3"/>
+                            <constraint firstItem="tGo-ej-icM" firstAttribute="trailing" secondItem="6EK-ru-Pd5" secondAttribute="trailing" constant="10" id="V8o-it-6Rv"/>
+                            <constraint firstItem="6EK-ru-Pd5" firstAttribute="leading" secondItem="tGo-ej-icM" secondAttribute="leading" constant="10" id="wgf-he-uK8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tGo-ej-icM"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="6EK-ru-Pd5" id="AqM-gb-Umm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7TH-fz-4b9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799" y="-80"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NotEatFish" width="700" height="510"/>
