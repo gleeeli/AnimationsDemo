@@ -43,6 +43,11 @@
 		077A7FB520CE455C00F3A4E8 /* CommSysAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */; };
 		077A7FBA20CE5D4E00F3A4E8 /* WaterProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB820CE5D4D00F3A4E8 /* WaterProgressView.m */; };
 		077A7FBD20CE5DC600F3A4E8 /* WaterProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FBC20CE5DC600F3A4E8 /* WaterProgressViewController.m */; };
+		077A7FFC20CE7A4A00F3A4E8 /* PPDragDropBadgeView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 077A7FF420CE7A4A00F3A4E8 /* PPDragDropBadgeView.bundle */; };
+		077A7FFD20CE7A4A00F3A4E8 /* PPDragDropBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FF620CE7A4A00F3A4E8 /* PPDragDropBadgeView.m */; };
+		077A7FFE20CE7A4A00F3A4E8 /* PRTween.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FF920CE7A4A00F3A4E8 /* PRTween.m */; };
+		077A7FFF20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FFB20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.m */; };
+		077A800220CE7A9F00F3A4E8 /* DrageBadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A800120CE7A9F00F3A4E8 /* DrageBadgeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +144,15 @@
 		077A7FB920CE5D4E00F3A4E8 /* WaterProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterProgressView.h; sourceTree = "<group>"; };
 		077A7FBB20CE5DC600F3A4E8 /* WaterProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterProgressViewController.h; sourceTree = "<group>"; };
 		077A7FBC20CE5DC600F3A4E8 /* WaterProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterProgressViewController.m; sourceTree = "<group>"; };
+		077A7FF420CE7A4A00F3A4E8 /* PPDragDropBadgeView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PPDragDropBadgeView.bundle; sourceTree = "<group>"; };
+		077A7FF520CE7A4A00F3A4E8 /* PPDragDropBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDragDropBadgeView.h; sourceTree = "<group>"; };
+		077A7FF620CE7A4A00F3A4E8 /* PPDragDropBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDragDropBadgeView.m; sourceTree = "<group>"; };
+		077A7FF820CE7A4A00F3A4E8 /* PRTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTween.h; sourceTree = "<group>"; };
+		077A7FF920CE7A4A00F3A4E8 /* PRTween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTween.m; sourceTree = "<group>"; };
+		077A7FFA20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTweenTimingFunctions.h; sourceTree = "<group>"; };
+		077A7FFB20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTweenTimingFunctions.m; sourceTree = "<group>"; };
+		077A800020CE7A9F00F3A4E8 /* DrageBadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrageBadgeViewController.h; sourceTree = "<group>"; };
+		077A800120CE7A9F00F3A4E8 /* DrageBadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrageBadgeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +327,7 @@
 		077A7FAA20CE409B00F3A4E8 /* ViewControl */ = {
 			isa = PBXGroup;
 			children = (
+				077A7FBF20CE7A0400F3A4E8 /* DrageBadge */,
 				077A7FB720CE5D2000F3A4E8 /* WaterProgress */,
 				077A7FAF20CE42F300F3A4E8 /* Commend */,
 				077A7FAB20CE40B400F3A4E8 /* Live */,
@@ -350,6 +365,38 @@
 				077A7FBC20CE5DC600F3A4E8 /* WaterProgressViewController.m */,
 			);
 			path = WaterProgress;
+			sourceTree = "<group>";
+		};
+		077A7FBF20CE7A0400F3A4E8 /* DrageBadge */ = {
+			isa = PBXGroup;
+			children = (
+				077A7FF320CE7A4A00F3A4E8 /* PPDragDropBadgeView */,
+				077A800020CE7A9F00F3A4E8 /* DrageBadgeViewController.h */,
+				077A800120CE7A9F00F3A4E8 /* DrageBadgeViewController.m */,
+			);
+			path = DrageBadge;
+			sourceTree = "<group>";
+		};
+		077A7FF320CE7A4A00F3A4E8 /* PPDragDropBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				077A7FF420CE7A4A00F3A4E8 /* PPDragDropBadgeView.bundle */,
+				077A7FF520CE7A4A00F3A4E8 /* PPDragDropBadgeView.h */,
+				077A7FF620CE7A4A00F3A4E8 /* PPDragDropBadgeView.m */,
+				077A7FF720CE7A4A00F3A4E8 /* PRTween */,
+			);
+			path = PPDragDropBadgeView;
+			sourceTree = "<group>";
+		};
+		077A7FF720CE7A4A00F3A4E8 /* PRTween */ = {
+			isa = PBXGroup;
+			children = (
+				077A7FF820CE7A4A00F3A4E8 /* PRTween.h */,
+				077A7FF920CE7A4A00F3A4E8 /* PRTween.m */,
+				077A7FFA20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.h */,
+				077A7FFB20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.m */,
+			);
+			path = PRTween;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +508,7 @@
 				0707C4AA1FD9104A0092EACC /* LaunchScreen.storyboard in Resources */,
 				0707C4A71FD9104A0092EACC /* Assets.xcassets in Resources */,
 				071AB8981FDA36C6002B7F19 /* README.md in Resources */,
+				077A7FFC20CE7A4A00F3A4E8 /* PPDragDropBadgeView.bundle in Resources */,
 				071AB88D1FDA36C6002B7F19 /* LICENSE in Resources */,
 				0707C4A51FD9104A0092EACC /* Main.storyboard in Resources */,
 			);
@@ -491,6 +539,7 @@
 				077A7FBA20CE5D4E00F3A4E8 /* WaterProgressView.m in Sources */,
 				071AB8AB1FDA5691002B7F19 /* BaseGiftAnimationView.m in Sources */,
 				077A7FB220CE44B000F3A4E8 /* CommonUse.m in Sources */,
+				077A7FFE20CE7A4A00F3A4E8 /* PRTween.m in Sources */,
 				071AB88F1FDA36C6002B7F19 /* MASConstraint.m in Sources */,
 				071AB8A71FDA3C3C002B7F19 /* UIImage+ClipImage.m in Sources */,
 				077A7FBD20CE5DC600F3A4E8 /* WaterProgressViewController.m in Sources */,
@@ -508,11 +557,14 @@
 				0707C4A21FD9104A0092EACC /* ViewController.m in Sources */,
 				0707C4AD1FD9104B0092EACC /* main.m in Sources */,
 				071AB8A41FDA3C3C002B7F19 /* NSString+Comm.m in Sources */,
+				077A7FFD20CE7A4A00F3A4E8 /* PPDragDropBadgeView.m in Sources */,
 				071AB8961FDA36C6002B7F19 /* View+MASAdditions.m in Sources */,
 				071AB88E1FDA36C6002B7F19 /* MASCompositeConstraint.m in Sources */,
+				077A7FFF20CE7A4A00F3A4E8 /* PRTweenTimingFunctions.m in Sources */,
 				071AB8951FDA36C6002B7F19 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				071AB8901FDA36C6002B7F19 /* MASConstraintMaker.m in Sources */,
 				071AB8A61FDA3C3C002B7F19 /* UIColor+ColorConvert.m in Sources */,
+				077A800220CE7A9F00F3A4E8 /* DrageBadgeViewController.m in Sources */,
 				071AB86F1FDA3069002B7F19 /* GiftAnimationView.m in Sources */,
 				0707C49F1FD9104A0092EACC /* AppDelegate.m in Sources */,
 				0707C4D51FD910920092EACC /* AnimationModel.m in Sources */,

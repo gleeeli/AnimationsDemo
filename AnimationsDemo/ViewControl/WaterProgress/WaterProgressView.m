@@ -31,7 +31,6 @@
     return self;
 }
 
-
 - (void)baseFrame:(CGSize)frameSize
 {
     //[super setFrame:frame];
@@ -99,12 +98,19 @@
     CGMutablePathRef pathRef = CGPathCreateMutable();
     CGFloat startOffY = waveHeight * sinf(self.offset * M_PI * 2 / self.bounds.size.width);
     CGFloat orignOffY = 0.0;
+    //初始化该path到一个初始点
     CGPathMoveToPoint(pathRef, NULL, 0, startOffY);
     for (CGFloat i = 0.f; i <= self.bounds.size.width; i++) {
+        /*
+         A:2 * M_PI / self.bounds.size.width = 一像素对应多少度数
+         B:A * i = 第i个像素，对应的度数
+         C：self.offset * M_PI * 2 / self.bounds.size.width  每一像素 每次增加的度数
+         orignOffY：x方向第i个像素对应的y坐标
+         */
         orignOffY = waveHeight * sinf(2 * M_PI / self.bounds.size.width * i + self.offset * M_PI * 2 / self.bounds.size.width) + self.yHeight;
         CGPathAddLineToPoint(pathRef, NULL, i, orignOffY);
     }
-    
+    // 添加一条直线，从初始点到该函数指定的坐标点
     CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, orignOffY);
     CGPathAddLineToPoint(pathRef, NULL, self.bounds.size.width, self.bounds.size.height);
     CGPathAddLineToPoint(pathRef, NULL, 0, self.bounds.size.height);

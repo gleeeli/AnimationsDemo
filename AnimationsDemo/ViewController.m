@@ -10,6 +10,7 @@
 #import "LiveAnimationViewController.h"
 #import "CommSysAnimationViewController.h"
 #import "WaterProgressViewController.h"
+#import "DrageBadgeViewController.h"
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -23,7 +24,7 @@
 {
     [super viewDidLoad];
     self.title = @"动画选择";
-    self.muArray = [[NSMutableArray alloc] initWithObjects:@"直播间全屏喇叭或发送礼物",@"常见系统动画",@"水波进度动画", nil];
+    self.muArray = [[NSMutableArray alloc] initWithObjects:@"直播间全屏喇叭或发送礼物",@"常见系统动画",@"水波进度动画",@"泡泡拖拽效果", nil];
     
 }
 
@@ -72,7 +73,12 @@
         myDetailVC.title = title;
         [self.navigationController pushViewController:myDetailVC animated:YES];
     }
-    
+    else if ([title isEqualToString:@"泡泡拖拽效果"])
+    {
+        DrageBadgeViewController *myDetailVC = [[DrageBadgeViewController alloc] init];
+        myDetailVC.title = title;
+        [self.navigationController pushViewController:myDetailVC animated:YES];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
