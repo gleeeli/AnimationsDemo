@@ -38,6 +38,9 @@
 		071AB8AB1FDA5691002B7F19 /* BaseGiftAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB8AA1FDA5691002B7F19 /* BaseGiftAnimationView.m */; };
 		071AB8AE1FDA5713002B7F19 /* CommGiftAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB8AD1FDA5713002B7F19 /* CommGiftAnimationView.m */; };
 		071AB8B11FDA5728002B7F19 /* ZhaTaGiftAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB8B01FDA5728002B7F19 /* ZhaTaGiftAnimationView.m */; };
+		077A7FAE20CE40DF00F3A4E8 /* LiveAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FAD20CE40DF00F3A4E8 /* LiveAnimationViewController.m */; };
+		077A7FB220CE44B000F3A4E8 /* CommonUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB120CE44B000F3A4E8 /* CommonUse.m */; };
+		077A7FB520CE455C00F3A4E8 /* CommSysAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,12 @@
 		071AB8AD1FDA5713002B7F19 /* CommGiftAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommGiftAnimationView.m; sourceTree = "<group>"; };
 		071AB8AF1FDA5728002B7F19 /* ZhaTaGiftAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhaTaGiftAnimationView.h; sourceTree = "<group>"; };
 		071AB8B01FDA5728002B7F19 /* ZhaTaGiftAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhaTaGiftAnimationView.m; sourceTree = "<group>"; };
+		077A7FAC20CE40DF00F3A4E8 /* LiveAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveAnimationViewController.h; sourceTree = "<group>"; };
+		077A7FAD20CE40DF00F3A4E8 /* LiveAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveAnimationViewController.m; sourceTree = "<group>"; };
+		077A7FB020CE44AF00F3A4E8 /* CommonUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUse.h; sourceTree = "<group>"; };
+		077A7FB120CE44B000F3A4E8 /* CommonUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUse.m; sourceTree = "<group>"; };
+		077A7FB320CE455C00F3A4E8 /* CommSysAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommSysAnimationViewController.h; sourceTree = "<group>"; };
+		077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommSysAnimationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +183,11 @@
 		0707C49C1FD9104A0092EACC /* AnimationsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				077A7FAA20CE409B00F3A4E8 /* ViewControl */,
 				0731A86A1FECC74E00987859 /* Third */,
 				0707C4D61FD911460092EACC /* CommHeader.h */,
 				071AB8991FDA3C3B002B7F19 /* Categroy */,
 				071AB8701FDA36C6002B7F19 /* Masonry */,
-				0707C4CF1FD910620092EACC /* Animation */,
 				0707C49D1FD9104A0092EACC /* AppDelegate.h */,
 				0707C49E1FD9104A0092EACC /* AppDelegate.m */,
 				0707C4A01FD9104A0092EACC /* ViewController.h */,
@@ -293,6 +302,36 @@
 			children = (
 			);
 			path = Third;
+			sourceTree = "<group>";
+		};
+		077A7FAA20CE409B00F3A4E8 /* ViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				077A7FAF20CE42F300F3A4E8 /* Commend */,
+				077A7FAB20CE40B400F3A4E8 /* Live */,
+			);
+			path = ViewControl;
+			sourceTree = "<group>";
+		};
+		077A7FAB20CE40B400F3A4E8 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				0707C4CF1FD910620092EACC /* Animation */,
+				077A7FAC20CE40DF00F3A4E8 /* LiveAnimationViewController.h */,
+				077A7FAD20CE40DF00F3A4E8 /* LiveAnimationViewController.m */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		077A7FAF20CE42F300F3A4E8 /* Commend */ = {
+			isa = PBXGroup;
+			children = (
+				077A7FB020CE44AF00F3A4E8 /* CommonUse.h */,
+				077A7FB120CE44B000F3A4E8 /* CommonUse.m */,
+				077A7FB320CE455C00F3A4E8 /* CommSysAnimationViewController.h */,
+				077A7FB420CE455C00F3A4E8 /* CommSysAnimationViewController.m */,
+			);
+			path = Commend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,17 +471,20 @@
 			files = (
 				071AB8B11FDA5728002B7F19 /* ZhaTaGiftAnimationView.m in Sources */,
 				071AB8AB1FDA5691002B7F19 /* BaseGiftAnimationView.m in Sources */,
+				077A7FB220CE44B000F3A4E8 /* CommonUse.m in Sources */,
 				071AB88F1FDA36C6002B7F19 /* MASConstraint.m in Sources */,
 				071AB8A71FDA3C3C002B7F19 /* UIImage+ClipImage.m in Sources */,
 				071AB8921FDA36C6002B7F19 /* MASViewAttribute.m in Sources */,
 				071AB8971FDA36C6002B7F19 /* ViewController+MASAdditions.m in Sources */,
 				071AB8941FDA36C6002B7F19 /* NSArray+MASAdditions.m in Sources */,
+				077A7FB520CE455C00F3A4E8 /* CommSysAnimationViewController.m in Sources */,
 				0707C4D21FD910620092EACC /* FullScreenWordRunAnimationView.m in Sources */,
 				071AB8931FDA36C6002B7F19 /* MASViewConstraint.m in Sources */,
 				071AB8AE1FDA5713002B7F19 /* CommGiftAnimationView.m in Sources */,
 				071AB8A81FDA3C3C002B7F19 /* UIImage+Comm.m in Sources */,
 				071AB8911FDA36C6002B7F19 /* MASLayoutConstraint.m in Sources */,
 				071AB8A51FDA3C3C002B7F19 /* NSString+Extension.m in Sources */,
+				077A7FAE20CE40DF00F3A4E8 /* LiveAnimationViewController.m in Sources */,
 				0707C4A21FD9104A0092EACC /* ViewController.m in Sources */,
 				0707C4AD1FD9104B0092EACC /* main.m in Sources */,
 				071AB8A41FDA3C3C002B7F19 /* NSString+Comm.m in Sources */,

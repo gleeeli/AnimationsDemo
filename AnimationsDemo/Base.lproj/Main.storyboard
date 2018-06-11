@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u2B-LU-UgO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zjC-TV-GvI">
+            <objects>
+                <navigationController id="u2B-LU-UgO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ggd-Ej-J1r">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tze-yc-xRv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4i-pb-Chx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-482" y="-249"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,37 +35,164 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5na-3l-9SX">
-                                <rect key="frame" x="1" y="124" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="开始礼物动画"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oke-rN-Mo1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SystemIdentifier" id="Uov-di-JTv">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uov-di-JTv" id="SIj-gi-03p">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="giftBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQ8-OY-ud4"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HSI-j5-Ss0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZAj-dX-d0K"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-RT-jD0">
-                                <rect key="frame" x="16" y="162" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="增加礼物"/>
-                                <connections>
-                                    <action selector="plusBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3og-dg-FCn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDF-ae-aT1">
-                                <rect key="frame" x="125" y="124" width="184" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="模拟全屏喇叭，可连续点击"/>
-                                <connections>
-                                    <action selector="fullScreenBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Mg-8e-ayh"/>
-                                </connections>
-                            </button>
+                            </tableView>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="GLH-He-zGo">
+                                <rect key="frame" x="10" y="10" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GLH-He-zGo" id="Hkb-av-Ps6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oke-rN-Mo1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="55t-B6-1jD"/>
+                            <constraint firstAttribute="bottom" secondItem="Oke-rN-Mo1" secondAttribute="bottom" id="BrB-SP-cBj"/>
+                            <constraint firstItem="Oke-rN-Mo1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xDi-bb-ibg"/>
+                            <constraint firstAttribute="trailing" secondItem="Oke-rN-Mo1" secondAttribute="trailing" id="zRi-fp-qac"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Mrl-Mh-gSA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-482" y="691"/>
+        </scene>
+        <!--Live Animation View Controller-->
+        <scene sceneID="ojq-f4-MDm">
+            <objects>
+                <viewController storyboardIdentifier="LiveAnimationViewController" id="hcO-iN-cTn" customClass="LiveAnimationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nM3-r4-8k7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPF-GA-PdG">
+                                <rect key="frame" x="16" y="66" width="92" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="开始礼物动画"/>
+                                <connections>
+                                    <action selector="giftBtnClick:" destination="hcO-iN-cTn" eventType="touchUpInside" id="1ZW-cS-Vio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-gQ-m3S">
+                                <rect key="frame" x="16" y="127" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="模拟全屏喇叭，可连续点击"/>
+                                <connections>
+                                    <action selector="fullScreenBtnClick:" destination="hcO-iN-cTn" eventType="touchUpInside" id="6eI-Js-EsS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csM-f0-AHj">
+                                <rect key="frame" x="156" y="60" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="增加礼物"/>
+                                <connections>
+                                    <action selector="plusBtnClick:" destination="hcO-iN-cTn" eventType="touchUpInside" id="Mxw-id-6ph"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rZn-uz-We0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swP-Kf-r9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445.60000000000002" y="-72.413793103448285"/>
+        </scene>
+        <!--Comm Sys Animation View Controller-->
+        <scene sceneID="7OJ-6o-haB">
+            <objects>
+                <viewController storyboardIdentifier="CommSysAnimationViewController" id="HMt-VF-MmZ" customClass="CommSysAnimationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UL6-vx-ZA2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4D-Sx-hN3">
+                                <rect key="frame" x="156.5" y="40" width="62" height="30"/>
+                                <state key="normal" title="开始动画"/>
+                                <state key="selected" title="下一个动画"/>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="HMt-VF-MmZ" eventType="touchUpInside" id="fze-Yv-p0F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无动画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-V0-unI">
+                                <rect key="frame" x="161.5" y="90" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotEatFish" translatesAutoresizingMaskIntoConstraints="NO" id="vu7-Z1-0yK">
+                                <rect key="frame" x="87.5" y="151" width="200" height="145.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4gd-Hs-NOb"/>
+                                    <constraint firstAttribute="width" secondItem="vu7-Z1-0yK" secondAttribute="height" multiplier="700:510" id="rOb-fk-5AX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4x-jr-Eau">
+                                <rect key="frame" x="126" y="356.5" width="123" height="30"/>
+                                <state key="normal" title="继续演示当前动画"/>
+                                <connections>
+                                    <action selector="continuePlayer:" destination="HMt-VF-MmZ" eventType="touchUpInside" id="uni-s8-SEm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuC-ha-8OW">
+                                <rect key="frame" x="228.5" y="40" width="141.5" height="30"/>
+                                <state key="normal" title="选择过渡类型">
+                                    <color key="titleColor" red="1" green="0.24395768833457276" blue="0.10984642731308325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selTransitonType:" destination="HMt-VF-MmZ" eventType="touchUpInside" id="P1p-N1-pzI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y4D-Sx-hN3" firstAttribute="top" secondItem="pRP-1O-bed" secondAttribute="top" constant="20" id="7nx-2N-NMz"/>
+                            <constraint firstItem="Y4D-Sx-hN3" firstAttribute="centerX" secondItem="UL6-vx-ZA2" secondAttribute="centerX" id="CEW-6L-moh"/>
+                            <constraint firstItem="W4x-jr-Eau" firstAttribute="centerX" secondItem="UL6-vx-ZA2" secondAttribute="centerX" id="DxE-18-AG0"/>
+                            <constraint firstItem="pRP-1O-bed" firstAttribute="trailing" secondItem="AuC-ha-8OW" secondAttribute="trailing" constant="5" id="FhG-Q8-Jzq"/>
+                            <constraint firstItem="W4x-jr-Eau" firstAttribute="top" secondItem="vu7-Z1-0yK" secondAttribute="bottom" constant="60" id="M5l-7l-dis"/>
+                            <constraint firstItem="vu7-Z1-0yK" firstAttribute="centerX" secondItem="UL6-vx-ZA2" secondAttribute="centerX" id="MmI-Eh-wpa"/>
+                            <constraint firstItem="AuC-ha-8OW" firstAttribute="centerY" secondItem="Y4D-Sx-hN3" secondAttribute="centerY" id="Mrj-BP-oz6"/>
+                            <constraint firstItem="9Ef-V0-unI" firstAttribute="centerX" secondItem="UL6-vx-ZA2" secondAttribute="centerX" id="V38-dI-kvY"/>
+                            <constraint firstItem="9Ef-V0-unI" firstAttribute="top" secondItem="Y4D-Sx-hN3" secondAttribute="bottom" constant="20" id="Y8O-rf-TCB"/>
+                            <constraint firstItem="vu7-Z1-0yK" firstAttribute="top" secondItem="9Ef-V0-unI" secondAttribute="bottom" constant="40" id="r6m-t8-Mkt"/>
+                            <constraint firstItem="AuC-ha-8OW" firstAttribute="leading" secondItem="Y4D-Sx-hN3" secondAttribute="trailing" constant="10" id="yxj-XR-BgI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pRP-1O-bed"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationInfoLabel" destination="9Ef-V0-unI" id="TJs-SO-8A5"/>
+                        <outlet property="fishImageView" destination="vu7-Z1-0yK" id="WIr-17-Uex"/>
+                        <outlet property="startButton" destination="Y4D-Sx-hN3" id="c9Y-sP-nXB"/>
+                        <outlet property="transtitionBtn" destination="AuC-ha-8OW" id="4cw-t3-tep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seC-fs-DdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="-80"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NotEatFish" width="700" height="510"/>
+    </resources>
 </document>
